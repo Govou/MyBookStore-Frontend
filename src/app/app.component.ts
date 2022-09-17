@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
         this.ngxService.stop();
         this.updateYear = null;
         this.updateEdition = null
-
+        this.itemUpdate = ""
         this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
 
           this.bookService.getBooks().subscribe(res => {
