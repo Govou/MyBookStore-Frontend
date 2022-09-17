@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,12 @@ import { FormsModule} from '@angular/forms';
     HttpClientModule,
     ToastrModule.forRoot(),
     MatIconModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: "toast-top-right",
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
